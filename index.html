@@ -240,11 +240,10 @@ button:hover {
 
         <form id="form">
             <input type="text" id="name" placeholder="Họ và tên" required>
-            <input type="number" id="age" placeholder="Tuổi" required>
             <input type="number" id="phone" placeholder="SĐT" required>
             <input type="text" id="problem" placeholder="Nghề nghiệp của bạn" required>
             
-            <button type="submit">Chuyển sang bước tiếp theo</button>
+            <button type="submit">BẤM VÀO ĐỂ NHẬN QUÀ</button>
         </form>
     </div>
 </div>
@@ -254,13 +253,11 @@ document.getElementById("form").addEventListener("submit", function(e){
     e.preventDefault();
 
     let name = document.getElementById("name").value;
-    let age = document.getElementById("age").value;
     let phone = document.getElementById("phone").value;
     let problem = document.getElementById("problem").value;
 
     fetch("https://script.google.com/macros/s/AKfycbyOYi4ezL_FfsJx8xTkF-j_A-2l2yNzYx-FUbpXlmwRHSvsZyBiNBYL1w1B2mks6mU/exec?name=" 
         + encodeURIComponent(name)
-        + "&age=" + age
         + "&phone=" + encodeURIComponent(phone)
         + "&problem=" + encodeURIComponent(problem),
     {
